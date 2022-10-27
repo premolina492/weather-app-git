@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <title>Wire Frame</title>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -12,89 +11,50 @@
         crossorigin="anonymous"
       />
       <link rel="stylesheet" href="styles.css" />
-    
-      </html>
+      <title>Weather App</title>
     </head>
 <body>
   <div class="container">
-  <div class="row">
-    <div class="col-3">
-      San Gabriel
-    </div>
-    <div class="col-3">
-      Temple City
-    </div>
-    <div class="col-3">
-      Rosemead
-    </div>
-    <div class="col-3">
+    <div class="weather-app">
+    <h1> 
       Alhambra
-    </div>
+    </h1>
+    <ul>
+      <li>
+        Thursday 4:00
+      </li>
+      <li>
+        Sunny
+      </li>
+    </ul>
+
+  <div class="row">
+    <div class="col-6"
+      <img 
+        src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+        alt="Sunny"
+      />
+      12°C | °F
+  </div>
+<div class="col-6">
+  <ul>
+    <li>
+      Precipitation: 0%
+    </li>
+    <li>
+      Humidity: 73%
+    </li>
+    <li>
+      Wind:2 km/h
+      </li>
+    </ul>
+  </div>
+  <small>
+    <a href="https://github.com/premolina492/weather-app-git" target="_blank">Open-source code</a> by Ivy Molina
+    </small>
   </div>
 </div>
-<div class="search-bar"
-  <form>
-    <input 
-    type="city" 
-    placeholder="Enter City Name"
-    autocomplete="off"
-    autofocus="on"
-    />
-
-    <input type="city" value="Search" />
-  </form>
-
-  </div>
-<h1>
-    Alhambra
-</h1>
-<h2>
-  Monday 10:44AM
-  <br>
-  Sunny
-</h2>
-  <h3>
-    ☀️72°
-  </h3>
-<h4>
-  Precipitation: 9%
-  <br>
-  Wind: 11km/h
-</h4>
-<div class="container">
-    <div class="row">
-      <div class="col">
-        Monday
-        <br>
-        ☀️
-        <br>
-        82°
-      </div>
-      <div class="col">
-        Tuesday
-        <br>
-        ☀️
-        <br>
-        80°
-      </div>
-      <div class="col">
-        Wednesday
-        <br>
-        ☀️
-        <br>
-        82°
-      </div>
-      <div class="col">
-          Thursday
-          <br>
-          ☀️
-          <br>
-          87°
-        </div>
-    </div>
-  </div>
-
+<script src="src/app.js"></script>
 </body>
-</html>
+</html> 
 
-<a href="https://github.com/premolina492/weather-app-git">Open-source code</a> by Ivy Molina
