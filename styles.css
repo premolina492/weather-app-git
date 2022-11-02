@@ -2,14 +2,6 @@ body {
   font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
-.weather-app {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 1px solid #c58ce1;
-  border-radius: 5px;
-}
-
 h1 {
   color: purple;
   font-size: 24px;
@@ -21,7 +13,6 @@ h1 {
 ul {
   margin: 0;
   padding: 0;
-
 }
 
 li {
@@ -31,8 +22,45 @@ li {
   color: plum;
   font-size: 16px;
   font-weight: 100; 
-
+  line-height:19px
 }
+
+.weather-app-wrapper {
+  padding: 20px;
+  border: 1px solid #c58ce1;
+  border-radius: 5px;
+}
+
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.stats {
+  position: absolute;
+  text-align: right;
+  margin-left: 300px;
+  margin-top: -70px;
+  white-space: nowrap;
+}
+
+.row {
+  margin-top: 40px;
+}
+
+.row strong {
+  margin-left: 20px;
+  font-size: 50px;
+}
+
+.row small {
+  position: relative;
+  font-size: 16px;
+  top: -32px;
+}
+
+
+
 
 
 
