@@ -25,6 +25,10 @@ li {
   line-height:19px
 }
 
+li:first-letter {
+  text-transform: capitalize;
+}
+
 .weather-app-wrapper {
   padding: 20px;
   border: 1px solid #c58ce1;
@@ -58,6 +62,7 @@ li {
   font-size: 16px;
   top: -32px;
 }
+
 
 
 
