@@ -15,10 +15,13 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+    console.log(response.data.daily);
     let forecastElement = document.querySelector("#forecast");
-    let forecastHTML = `<div class="row">`;
+
     let days = ["Thu", "Fri", "Sat", "Sun"];
+
+    let forecastHTML = `<div class="row">`;
     days.forEach(function (day) {
     forecastHTML = forecastHTML + 
             `
@@ -30,8 +33,8 @@ function displayForecast() {
                 width="42" 
             />
         <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max"> 18 </span>
-            <span class="weather-forecast-temperature-min"> 12</span>
+          <span class="weather-forecast-temperature-max"> 18° </span>
+            <span class="weather-forecast-temperature-min"> 12° </span>
         </div>
       </div>
         `;
@@ -40,9 +43,16 @@ function displayForecast() {
     forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+    console.log(coordinates);
+    let apiKey = "233ae3do44b912208eba49363ftbb5fe";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=Lisbon&key=${apiKey}&units=metric`
+    console.log(apiUrl);
+    axios.get(apiUrl).then(displayForecast);
+}
+
 
 function displayTemperature(response) {
-    console.log(response.data);
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
     let descriptionElement = document.querySelector("#description");
@@ -64,6 +74,9 @@ function displayTemperature(response) {
         `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
         );
     iconElement.setAttribute("alt", response.data.condition.description);
+
+ getForecast(response.data.coordinates);
+
 }
 
 function search(city) {
@@ -110,7 +123,9 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 
 search("New York");
-displayForecast();
+
+
+
 
 
 
